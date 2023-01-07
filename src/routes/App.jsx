@@ -17,7 +17,7 @@ const lightTheme = {
 
 const darkTheme = {
   background: '#222222',
-  color:'#fff'
+  color: '#fff'
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -30,9 +30,10 @@ const GlobalStyle = createGlobalStyle`
 function App() {
 
   const [theme, setTheme] = useState('light');
+  const [valueBtn, setValueBtn] = useState('Activar tema oscuro')
 
   const toggleTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
+    theme === 'light' ? setTheme('dark') || setValueBtn('Activar tema claro') : setTheme('light') || setValueBtn('Activar tema oscuro')
   }
   return (
     <>
@@ -41,6 +42,7 @@ function App() {
         <BrowserRouter>
           <UseContexto>
             <Header />
+            <input type='button' onClick={toggleTheme} className='btn-theme' value={valueBtn}></input>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/producto' element={<Producto />} />
@@ -49,7 +51,6 @@ function App() {
             <Footer />
           </UseContexto>
         </BrowserRouter>
-        <button onClick={toggleTheme}>cambiar</button>
       </ThemeProvider>
     </>
   )

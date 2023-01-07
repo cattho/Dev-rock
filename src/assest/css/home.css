@@ -12,13 +12,29 @@ body {
   position: absolute;
   right: 24px;
   top: 50px;
+  border: 1px solid #fff;
+  border-radius: 0 30% 0 30%;
+  background-color: #fff;
 }
 
 .volver {
-  width: 20px;
+  width: 30px;
   position: absolute;
   left: 24px;
   top: 58px;
+  border: 1px solid #fff;
+  border-radius: 0 30% 0 30%;
+  background-color: #fff;
+}
+
+.btn-theme{
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .titulo {
