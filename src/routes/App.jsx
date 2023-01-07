@@ -12,12 +12,12 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const lightTheme = {
   background: '#fff',
-  color: '#666'
+  color: '#666',
 };
 
 const darkTheme = {
-  background: '#000',
-  color: '#666'
+  background: '#222222',
+  color:'#fff'
 };
 
 const GlobalStyle = createGlobalStyle`

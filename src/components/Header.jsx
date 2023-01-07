@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ikCarrito from '../assest/statics/carrito.png';
 import ikVolver from '../assest/statics/volver.png';
 
+
 export const Header = () => {
   return (
     <>
