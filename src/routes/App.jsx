@@ -8,6 +8,8 @@ import { Carrito } from '../containers/Carrito';
 import UseContexto from '../context/UseContexto';
 import { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { useEffect } from 'react';
+
 
 
 const lightTheme = {
@@ -29,13 +31,18 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const [valueBtn, setValueBtn] = useState('🌚')
 
   const toggleTheme = () => {
     theme === 'light' ? setTheme('dark') || setValueBtn('🌞') : setTheme('light') || setValueBtn('🌚')
-    localStorage.setItem('tema', theme)
+    localStorage.setItem('theme', theme)
   }
+
+  useEffect(() => {
+    toggleTheme()
+  }, [])
+
   return (
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

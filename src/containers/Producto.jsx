@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import contexto from '../context/contexto'
 
-export const Producto = () => {
+export const Producto = (props) => {
+    const { nombre, medidas, img, id } = props;
+    const { productos } = useContext(contexto);
     return (
         <>
             <div className="detalle">
                 <img
-                    src="http://escueladevrock.com/store/12.png"
+                    src={img}
                     alt=""
                     className="detalle-img"
                 />

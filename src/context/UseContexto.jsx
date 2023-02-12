@@ -14,8 +14,13 @@ export default function UseContexto(props) {
     const [state, dispatch] = useReducer(Reducer, intitialState);
 
     const getProduct = async () => {
-        const res = await axios.get(url)
-        dispatch({ type: 'listar_producto', payload: res.data })
+        try {
+            const res = await axios.get(url)
+            dispatch({ type: 'listar_producto', payload: res.data })
+        }catch(error){
+            console.log(error)
+        }
+        
     }
 
     const setCar = (item) => {

@@ -1,13 +1,18 @@
 .home-item {
-    padding: 10px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: solid 1px #999;
     width: 12rem;
+    height: 20rem;
     margin: 5px;
     border-radius: 20px;
     justify-content: space-between;
+  }
+
+  .home-item-info{
+    width: 100%;
   }
 
   .home-item-img {
@@ -15,8 +20,9 @@
   }
 
   .home-item-actions {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
     
   .home-item-titulo {
@@ -44,6 +50,6 @@
     color: white;
     border: 0px;
     border-radius: 10px;
-    width: 40px;
+    min-width: 40px;
     cursor: pointer;
   }
